@@ -1,0 +1,154 @@
+body {
+  font-family: 'Cairo', 'Arial', sans-serif;
+  background: linear-gradient(135deg, #a8edea, #fed6e3);
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+}
+
+.container {
+  max-width: 750px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0,0,0,.12);
+  padding: 28px 36px;
+}
+
+h1 {
+  text-align: center;
+  color: #204c83;
+  margin-bottom: 32px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+label {
+  font-size: 1.1em;
+  color: #333;
+}
+
+select, input[type="text"], input[type="number"] {
+  font-size: 1em;
+  padding: 7px 10px;
+  border: 1px solid #b8c1d1;
+  border-radius: 5px;
+  outline: none;
+}
+
+button {
+  background: #204c83;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background .2s;
+}
+
+button:hover {
+  background: #2c6fb8;
+}
+
+.attendance-section {
+  margin-top: 30px;
+}
+
+#attendanceTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+
+#attendanceTable th, #attendanceTable td {
+  border: 1px solid #e0e6ed;
+  padding: 10px;
+  text-align: center;
+}
+
+#attendanceTable th {
+  background: #e0e6ed;
+  color: #204c83;
+}
+
+#attendanceTable td {
+  background: #fff;
+}
+
+.stats-box {
+  background: #f1f6fc;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 1em;
+  color: #204c83;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background: rgba(0,0,0,.3);
+}
+
+.modal-content {
+  background: #fff;
+  margin: 5% auto;
+  padding: 24px;
+  border-radius: 10px;
+  width: 95%;
+  max-width: 400px;
+  position: relative;
+}
+
+.close {
+  color: #204c83;
+  position: absolute;
+  left: 18px;
+  top: 16px;
+  font-size: 33px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#studentsList {
+  margin-bottom: 18px;
+}
+
+.student-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8f9fb;
+  padding: 6px 12px;
+  margin-bottom: 4px;
+  border-radius: 5px;
+}
+
+.student-name {
+  font-size: 1.05em;
+}
+
+.remove-btn {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.95em;
+}
+
+.remove-btn:hover {
+  background: #b61e15;
+}
