@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نظام تسجيل حضور وغياب الطلاب</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <!-- AutoTable -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>نظام تسجيل حضور وغياب الطلاب</h1>
+
+    <div class="controls">
+      <label for="grade">اختر الصف:</label>
+      <select id="grade">
+        <option value="7">الصف السابع</option>
+        <option value="8">الصف الثامن</option>
+        <option value="9">الصف التاسع</option>
+      </select>
+      <button id="manageStudentsBtn">إدارة الطلاب</button>
+    </div>
+
+    <!-- نافذة إدارة الطلاب -->
+    <div id="manageStudents" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>إدارة الطلاب للصف <span id="currentGrade"></span></h2>
+        <div id="studentsList"></div>
+        <input type="text" id="studentNameInput" placeholder="اسم الطالب الجديد...">
+        <button id="addStudentBtn">إضافة طالب</button>
+      </div>
+    </div>
+
+    <!-- جدول الحضور -->
+    <div class="attendance-section">
+      <h2>تسجيل حضور اليوم (<span id="attendanceDate"></span>)</h2>
+      <div id="stats" class="stats-box"></div>
+      <table id="attendanceTable">
+        <thead>
+          <tr>
+            <th>اسم الطالب</th>
+            <th>الحالة</th>
+            <th>زمن التأخر</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <button id="resetAttendanceBtn">إعادة تعيين اليوم</button>
+      <button id="exportPdfBtn">تصدير الكشف إلى PDF</button>
+    </div>
+
+    <footer>
+      <p style="text-align:center; color:#888; margin-top:28px; font-size:1em;">
+        تم تطويره بواسطة يوسف كراسي
+      </p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
